@@ -4,10 +4,7 @@ services:
 
 
 before_install
-  - docker build -t jawep/docker-react -f Dockerfile.dev .
+  - docker build -t docker-react -f Dockerfile.dev .
 
 script:
-  - docker run jawep/docker-react npm run test -- -- coverage
-
-
-   
+  - docker run docker-react npm run test -- -- coverage
