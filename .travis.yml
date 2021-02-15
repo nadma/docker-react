@@ -8,4 +8,6 @@ before_install
 
 script:
   - docker run jawep/docker-react npm run test -- -- coverage
+
+
    
