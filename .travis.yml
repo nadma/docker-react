@@ -1,0 +1,11 @@
+sudo: required
+services:
+  - docker
+
+
+before_install
+  - docker build -t jawep/docker-react -f Dockerfile.dev .
+
+script:
+  - docker run jawep/docker-react npm run test -- -- coverage
+   
